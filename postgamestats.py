@@ -59,3 +59,16 @@ average_touchdowns = round(average_touchdowns, 1)
 
 print(f'Average passing yards: {average_yards}')
 print(f'Average touchdowns: {average_touchdowns}')
+
+
+print("\n-- Player Performance Highlights --") # displaying the player performance to device each stat section
+# Calculated who has the most passing yards, touchdowns and the difference from the average team stat.
+
+for player in kcc_team:
+    if player['passing_yards'] > average_yards:
+        difference = player['passing_yards'] - average_yards # Calculate the difference from the 
+        print(f"{player['name']} has more passing yards than the team average.")
+        print(f"{player['name']} has {difference} more passing yards than the team average.")
+    
+    if player['touch_downs'] > 50:
+        print(f"{player['name']} has more than 50 touchdowns.")
